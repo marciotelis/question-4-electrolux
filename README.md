@@ -13,7 +13,10 @@
 - Check which command received
 - Handles the command, adapting the message reading according to the command
 - Save payload in registers
-- At the end, it performs the checksum (CRC) to certify that the message received is correct
+- At the end, it performs the checksum (CRC) to certify that the message received is correct  
+
+> Main code flow:  
+> In eusart1.c the interrupt is handled by saving each incoming byte. The timer checks when each message has ended (by the time between receiving one byte and another). With the message ready, the decodeIt() function is called, which is in the modbus.c file. In this, the treatment of the message is carried out, with the implementation of the protocol and the storage of the payload in the registers.
 
 ## Features
 
