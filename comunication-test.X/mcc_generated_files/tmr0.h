@@ -51,8 +51,12 @@
   Section: Included Files
 */
 
-#include <stdint.h>
+#include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
+#include <stdint.h>
+
+uint32_t time_millis = 0;
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

@@ -34,12 +34,17 @@
          <string>class com.microchip.mcc.mcu8.modules.tmr0_mid0.TMR0</string>
       </entry>
       <entry>
+         <string>UART</string>
+         <string>class com.microchip.mcc.foundationservices.modules.softwaredriver.UART.UART</string>
+      </entry>
+      <entry>
          <string>WWDT</string>
          <string>class com.microchip.mcc.mcu8.systemManager.wwdt.WWDT</string>
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu8.Mcu8PeripheralLibrary" version="1.81.7"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.foundationservices.library.FoundationServicesLibrary" version="0.2.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1559,11 +1564,11 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RXPPS%aux1"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RXPPS%aux0"/>
          <value>23</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="T0CKIPPS%aux0"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="T0CKIPPS%aux1"/>
          <value>4</value>
       </entry>
       <entry>
@@ -7891,6 +7896,42 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="UARTConfigurations"/>
+         <value>EUSART1-PIC10 / PIC12 / PIC16 / PIC18 MCUs </value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="UARTCustomCount"/>
+         <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="pubSubUARTConfigurations"/>
+         <value>3895.0830358187195</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="usecaseComboSettings"/>
+         <value>Basic Read/Write with Printf support</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART" name="validate"/>
+         <value>0.5344742951812502</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%0%interruptState"/>
+         <value>enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%0%name"/>
+         <value>UART0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%0%selectedModule"/>
+         <value>EUSART1-PIC10 / PIC12 / PIC16 / PIC18 MCUs </value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="UART" name="uartConfigurationList%0%speed"/>
+         <value>9600</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="WWDT" name="wwdtPeriod"/>
          <value>2.11406</value>
       </entry>
@@ -7933,6 +7974,10 @@
          <hash>2390fa3914dd8e56f4ee0ab2e834fd16c3ebe30f7c944a53ae21fb1c54cd4b40</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\drivers\uart.h</file>
+         <hash>6f6726e12493b247d36a3b6d7dcfb5ead7473cef69ea2166d4a331152a9220cb</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\interrupt_manager.h</file>
          <hash>e86f9abafea35d26123559820982869fd0ea4370b70eab202775c3348c1ca6ad</hash>
       </entry>
@@ -7957,8 +8002,20 @@
          <hash>b7da0c90c62a2c248495f8b1c11f36a5c0550761bc4e40a76466f9dfef7b3c35</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\examples\uart_example.h</file>
+         <hash>8af9efe4012a0e9001ffd6441b1605ebb01f2349dd3c0abd1b1d9e3ce31b67ca</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\tmr0.c</file>
          <hash>059ec2352c8f3397b7c89d15918a1024fa8cc18dacba9ed822ae3c7bb2051d7f</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\examples\uart_example.c</file>
+         <hash>d460245fc50503e3f186c3d4d63b525821a5b61155e1a0d96975ba101d678a51</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\docs\uart.dox</file>
+         <hash>98e8108c480be91b9d680db751409daa16ab284d6e3664e56dff426441d18783</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
@@ -7967,6 +8024,10 @@
       <entry>
          <file>mcc_generated_files\mcc.c</file>
          <hash>a12c9aea6290f3556d0a4b53b8b23d58b440d276fb3375c01592300e656d9513</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\drivers\uart.c</file>
+         <hash>41c983026819f2d89e74e26da6f9ff22e3708095bfa1cac82538fb4be484bee1</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>

@@ -50,6 +50,7 @@
 
 #include <xc.h>
 #include "tmr0.h"
+#include "../modbus.h"
 
 
 /**
@@ -131,8 +132,15 @@ void TMR0_ISR(void)
 
 void TMR0_CallBack(void)
 {
-    // Add your custom callback code here
+    /* Milliseconds counter */
+    time_millis++;
 
+    if (((time_millis - time_last_recieved) >= 5) && (message_length > 0)) {
+        modbus_message = 1;
+        decodeIt();
+        message_length = 0;
+    }
+    
     if(TMR0_InterruptHandler)
     {
         TMR0_InterruptHandler();

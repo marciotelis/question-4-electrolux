@@ -8,6 +8,13 @@
 
 ## Comments
 
+> The exercise asked to perform a communication that has different commands with different payloads, with both positive and negative values. I implemented the modbus protocol, as it has these characteristics and more, being very robust and widely used.  
+- It checks if the message is for itself (via addressing, in the exercise software I left it set to 1, it can be selected via software and/or hardware)
+- Check which command received
+- Handles the command, adapting the message reading according to the command
+- Save payload in registers
+- At the end, it performs the checksum (CRC) to certify that the message received is correct
+
 ## Features
 
 - [ ] UART driver
