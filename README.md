@@ -17,12 +17,10 @@
 
 ## Features
 
-- [ ] UART driver
-- [ ] CRC
-- [ ] Comunication protocol
-- [ ] Interruption for incoming messages
-
-## Test program
+- [x] UART driver
+- [x] CRC
+- [x] Comunication protocol
+- [x] Interruption for incoming messages
 
 ## Build settings
 
